@@ -1,0 +1,469 @@
+*{
+    font-family: "Noto Sans JP", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box
+
+}
+
+body{
+    background-color: black;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    /* CSS smooth scroll*/
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.logo {
+    align-items: center;
+  }
+.navbar{
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    min-height: 8vh;
+    background-color: rgba(0,0,0,0.3);
+    top: 0;
+    z-index: 1;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    width: 35%;
+    justify-content: center;
+}
+.navbar ul li {
+    margin: 0 0rem;
+    padding: 0.5rem;
+    
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.navbar ul li::after {
+    text-decoration: none;
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: orangered;
+    display: block;
+    margin: auto;
+    transition: 0.4s;
+  }
+.navbar ul li:hover::after {
+    width: 100%;
+  }
+  .burger div {
+    width: 25px;
+    height: 3px;
+    margin: 4px;
+    background-color: orangered;
+    transition: all 0.5s ease;
+  }
+  
+  .burger {
+    display: none;
+    cursor: pointer;
+  }
+
+  section#home{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      height: 100vh;
+      scroll-snap-align: center;
+
+  }
+  section#int{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: center;
+  }
+
+  section#projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: center;
+    
+  }
+  .contain{
+    width: 30%;
+    color: black;
+    line-height: 200%;
+  }
+  
+.stuff{
+  background-color: snow;
+  border: 5px solid black;
+}
+.stuff ul {
+  list-style-position: inside;
+}
+  .job-title{
+    font-size: 25px;
+    list-style: none;
+  }
+  .separator {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+  }
+
+
+
+
+
+  section h1{
+      font-size: 4rem;
+      font-weight: normal;
+      font-family: serif;
+  }
+  section p{
+      font-size: 1.5rem;
+  }
+
+  section#home{
+      background: url("https://mtvdonpablo.github.io/first-website/imgs/nikita-kachanovsky-OVbeSXRk_9E-unsplash.jpg") no-repeat center center/
+      cover;
+  }
+  section#home h1{     
+      font-size: 10rem;
+      font-weight: normal;
+
+  }
+section#int{
+    background: url("https://mtvdonpablo.github.io/first-website/imgs/christian-lambert-hlOpCML8twI-unsplash.jpg") no-repeat center center/
+    cover;
+}
+section#projects{
+    background: url("https://mtvdonpablo.github.io/first-website/imgs/jefferson-santos-9SoCnyQmkzI-unsplash.jpg") no-repeat center center/
+    cover;
+}
+
+.heading{
+  transform: translateY( 190%);
+}
+.wrapper{
+  display: flex;
+  /*background-color: yellow;*/
+  width: 95%;
+  height: 70%;
+
+  align-items: center;
+}
+
+.boxa{
+  /*background-color: red;*/
+  margin: auto;
+  width: 50%;
+  height: 50%;
+  /*border: 5px solid black;*/
+}
+
+.boxb{
+  /*background-color: blue;*/
+  margin: auto;
+  width: 50%;
+  height: 50%;
+  /*border: 5px solid black;*/
+
+}
+.boxc{
+  /*background-color: cadetblue; */
+  margin: auto;
+  width: 50%;
+  height: 50%;  
+  /*border: 5px solid black;*/
+}
+.boxd{
+  display: none;
+}
+
+
+.boxa h2{
+  transform: translateY(20px);
+  font-weight: normal;
+  font-family: serif;
+}
+.boxb h2{
+  transform: translateY(20px);
+  font-weight: normal;
+  font-family: serif;
+}
+.boxc h2{
+  transform: translateY(20px);
+  font-weight: normal;
+  font-family: serif;
+}
+
+/*slideshow stuff*/
+
+.carousel {
+  height: 100%;
+  position: relative;
+}
+
+.carousel__item {
+  height: 100%;
+  padding: 1em;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  color: #ffffff;
+  display: none;
+}
+.carousel__item img{
+  height: 100%;
+  width: 320px;
+  border: 5px solid black;
+
+}
+
+
+.carousel__item--selected {
+  display: block;
+  height: 100%;
+}
+
+.carousel__nav {
+  width: 100%;
+  /*padding: 5px 0;*/
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+.carousel__button {
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  background: white;
+  border-radius: 50%;
+  margin: -1% 5px;
+  cursor: pointer;
+}
+
+.carousel__button--selected {
+  background: orangered/*rgba(255, 255, 255, 0.5)*/;
+}
+
+/*slideshow stuff*/
+
+
+
+
+
+@media screen and (max-width: 1160px) {
+  .boxa,.boxb,.boxc{
+    display: none;
+  }
+  .boxd{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 90%;
+  }
+/*    object-fit: cover; */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  height: 100%;
+}
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+.mySlides img{
+  height: 590px;
+}
+/* Next & previous buttons */
+.next {
+  cursor: pointer;
+  position: absolute;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 35px;
+  transition: 0.6s ease;
+  top: 300px;
+  transform: translateY(-50%);
+  user-select: none;
+  right: 0;
+}
+.prev{
+  cursor: pointer;
+  position: absolute;
+  font-weight: bold;
+  color: white;
+  transition: 0.6s ease;
+  font-size: 35px;
+  padding: 16px;
+  left: 0;
+  top: 300px;
+  transform: translateY(-50%);
+  user-select: none;
+
+}
+  
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+  .heading{
+    transform: translateY(30px);
+  }
+  
+
+}
+
+
+
+@media screen and (max-width: 800px){
+  section#home h1{
+    font-size: 7rem;
+  }
+  section#int h1{
+    font-size: 3rem;
+  }
+  section#projects h1{
+    font-size: 3rem;
+  }
+
+}
+
+
+/* Nva bar responsive */
+@media screen and (max-width: 768px) {
+    .navbar{
+        background-color: rgba(0,0,0,0.9); 
+    }
+    .logo {
+        align-items: center;
+      }
+    .burger {
+        display: block;
+        cursor: pointer;
+      }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: rgba(0,0,0,0.9);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        }
+    .nav-links li{
+        opacity: 0;
+        }
+      
+}
+
+/* Nva bar responsive */
+
+@media screen and (max-width: 600px) {
+.contain{
+  width: 100%;
+}
+.mySlides img{
+  height: 500px;
+}
+
+}
+
+
+.nav-active {
+  transform: translateX(0%);
+}
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-3px, 3px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-7px, -7px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
