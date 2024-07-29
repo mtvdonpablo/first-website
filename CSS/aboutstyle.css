@@ -79,8 +79,26 @@ body{
     display: none;
     cursor: pointer;
   }
-
+  #About-title{
+    color: White;
+    font-size: 3em;
+    font-weight: bold;;
+  }
+  #About-p{
+    padding-top: 1%;
+    height: 45vh;
+    width: 180vh;
+    background-color: rgba(0,0,0,0.5);
+    
+  }
+  .About-text{
+    
+    font-weight: lighter;
+    font-size: 0.4em;
+    padding-bottom: 2%;
+  }
   section#home{
+      border: 5px solid blue;
       display: flex;
       flex-direction: column;
       align-items: center;
